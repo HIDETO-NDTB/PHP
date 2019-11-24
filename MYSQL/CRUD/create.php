@@ -62,7 +62,7 @@
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="submit">
-                            <a href="index.php" class="btn byn-default">Cancel</a>
+                            <a href="index.php" class="btn btn-default">Cancel</a>
                         </div>
                         
                     </form>
