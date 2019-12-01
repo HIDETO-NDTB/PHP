@@ -28,7 +28,7 @@
     if($conn->multi_query($sql) == TRUE)
         echo "Records Updated successfully";
     else
-        echo "Erroro updation".$conn->error;
+        echo "Error updation".$conn->error;
 
    /* $sql = "UPDATE USER set email = 'yukito@hotmail.co.jp' WHERE id=3;";
 

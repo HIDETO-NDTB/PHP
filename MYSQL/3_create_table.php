@@ -2,20 +2,21 @@
 
 include './config.php';
 
-$sql = "CREATE TABLE IF NOT EXISTS Users(
-    id INT(2) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(30) NOT NULL,
-    password VARCHAR(10) NOT NULL,
-    email VARCHAR(50) UNIQUE,
-    reg_date TIMESTAMP
-)";
+$sql = "CREATE TABLE IF NOT EXISTS Member(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL,
+    message VARCHAR(100) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );";
 
 if($conn->query($sql) == TRUE)
-    echo "Table Users created successfully";
+    echo "Table Members created successfully";
 else
     echo "Error creating table".$conn->error;
 
-    $sql = "CREATE TABLE IF NOT EXISTS product(
+    /*$sql = "CREATE TABLE IF NOT EXISTS product(
         prod_id INT(2) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         prod_name VARCHAR(30) NOT NULL,
         price INT(5) NOT NULL,
@@ -62,7 +63,7 @@ else
 if($conn->query($sql) == TRUE)
 echo "Table Emproyee created successfully";
 else
-echo "Error creating table".$conn->error;
+echo "Error creating table".$conn->error;*/
 
 
 ?>

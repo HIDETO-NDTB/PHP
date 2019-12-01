@@ -34,7 +34,7 @@
                                     echo"<th>Age</th>";
                                     echo"<th>Gender</th>";
                                     echo"<th>Date</th>";
-                                    echo "<th>Delete</th>";
+                                    echo "<th colspan='3'>Actions</th>";
                                 echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
@@ -47,6 +47,7 @@
                                     echo "<td>".$row['age']."</td>";
                                     echo "<td>".$row['gender']."</td>";
                                     echo "<td>".$row['given_date']."</td>";
+                                    echo "<td><a class='btn btn-info' href='create_hw.php?id=".$row['id']."'title='Create Records '>Create</a></td>";
                                     echo "<td><a class='btn btn-danger' href='delete_hw.php?id=".$row['id']."'title='Delete Record'>Delete</a></td>";
                                 echo "</tr>";
                             }
